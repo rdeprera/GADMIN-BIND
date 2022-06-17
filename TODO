@@ -1,0 +1,21 @@
+
+TODO:
+-----------------------------------------------------------
+
+Change resource button: Create the change resource window and functions.
+
+Add: Views
+
+Add: DNS SEC
+
+Tab for: blackhole lists and domain access lists (named.conf)
+
+Add "stub" and "forward"(caching) domain type selections.
+
+Add update intervals to "change domain" window:
+"ttl 3D" "3W" "2D" "1H".
+
+Domain settings window:
+Adresses changes not done.
+
+Add: NAPTR's sip:address mailto:address etc.

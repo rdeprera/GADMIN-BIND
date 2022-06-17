@@ -1,0 +1,79 @@
+Version 0.2.5
+-------------
+Fixes specfile desktop entry.
+Use correct sysinit stop command.
+
+
+
+Version 0.2.4
+-------------
+Now using a gadmin-bind sysinit script.
+Sets status color.
+Sets missing server color.
+
+
+Version 0.2.3
+--------------
+Changed the name of the desktop file to gadmin-bind.desktop.
+Updated ip_handling.[c,h] to GPL version 3 thanks to Daniel Baumann.
+A Big thanks to JJ, Daniel Baumann and a happy birthday to me :)
+
+
+Version 0.2.2
+--------------
+Changed name from gbindadmin to gadmin-bind.
+Added options "listen-on port 53" and "listen-on-v6 port 53" to the default configuration.
+Added SYSINIT_START_CMD and SYSINIT_STOP_CMD for starting the server at boot.
+Activation status is now read from the proc filesystem.
+Added log reading optimizations.
+Added IPv6 support.
+Fixed reverse IPv4 lookups.
+Updated to the new pam specs.
+Switched to GPL version 3.
+
+
+Version 0.1.5
+--------------
+Added RNDC_CONF path configure option.
+Fixed a problem where the defined group NOBODY wouldnt be
+added in some cases (thanks to Jason Banks).
+User and group delimiters for chown are now colons.
+Pressing enter in the verification entry now runs the specified command.
+Fixed cases where rndc.conf could be missing (thanks to Jason Banks).
+All translatable strings are now utf8 aware and the entire application can be translated.
+Added Swedish translation (Magnus-swe)
+
+Version 0.1.4
+--------------
+User NOBODY is added if it doesnt exist.
+The secret key is now shown in the settings window.
+
+Version 0.1.3
+--------------
+Owner and group for the bind chroot is now set to
+root.NAMED_USER so the user the server runs as 
+has read and write permissions where it should.
+Added a domain verification tab.
+
+Version 0.1.2
+--------------
+Domain type is now selected with a combo box.
+The settings directory is created if it doesnt exist.
+Fixed the rpm specfile.
+Added a new program icon (Thanks to Bjorn Lindner)
+Thanks to Sebastian Schoss for the new site www.gadmintools.org
+
+Version 0.1.1
+--------------
+Added allow-updates and also-notify in the domain settings.
+The domain settings window now hides entries that cannot be 
+used depending on the selected domain type.
+Mayor path restructuring, the path settings can now be used.
+Changed the way PTR records where created.
+
+Version 0.1.0
+--------------
+Added Domain change button with domain setting window with
+      recursive domain changes and on the fly domain type changes etc.
+Added a Settings window with paths and rndc key generation.
+Added a Resolvers tab.

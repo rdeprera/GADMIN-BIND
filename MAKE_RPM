@@ -1,0 +1,10 @@
+#!/bin/sh
+# Make an RPM.
+
+version='0.2.5'
+
+cd ..
+###tar -zhcvf /usr/src/redhat/SOURCES/gadmin-bind-$version.tar.gz gadmin-bind-$version
+tar -zhcvf /root/rpmbuild/SOURCES/gadmin-bind-$version.tar.gz gadmin-bind-$version
+cd gadmin-bind-$version
+rpmbuild -ba gadmin-bind.spec

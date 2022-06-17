@@ -1,0 +1,1057 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2006 Magnus Loef (Magnus-swe)
+# This file is distributed under the same license as the gbindadmin package.
+# FIRST AUTHOR <magnus-swe@telia.com>, 2006.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: gbindadmin 0.1.5\n"
+"Report-Msgid-Bugs-To: magnus-swe@telia.com\n"
+"POT-Creation-Date: 2006-07-15 17:42+0200\n"
+"PO-Revision-Date: 2010-07-15 00:00+0200\n"
+"Last-Translator: Magnus Loef <magnus-swe@telia.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid ""
+"; This configuration is old. A working resolver is required for updates.\n\n"
+msgstr "; Den här konfigurationen är gammal. För att uppdatera krävs en fungerande upplösare.\n\n"
+
+msgid ""
+"Forward lookup: host dns1.example.org\nReverse lookup: host (IP of dns1.example.org)\nNetwork info: ifconfig\n"
+msgstr "Framlänges uppslagning: host dns1.example.org\nBaklänges uppslagning: host (IP of dns1.example.org)\nNätverksinformation: ifconfig\n"
+
+msgid ""
+"CMD_SLEEP_LOG_SECS should be in seconds, please reinstall the program.\n"
+msgstr "CMD_SLEEP_LOG_SECS borde vara specificerat i minuter, var vänlig installera om programmet.\n"
+
+msgid "CMD_SLEEP_LOG_SECS max length is 2, please reinstall the program.\n"
+msgstr "CMD_SLEEP_LOG_SECS max längd är 2, var vänlig installera om programmet.\n"
+
+#, c-format
+msgid ""
+"Error running command:\n"
+"%s\n"
+msgstr "Fel vid körning av kommando:\n"
+"%s\n"
+
+#, c-format
+msgid ""
+"Error: could not write named.conf here:\n"
+"%s\n"
+msgstr "Fel: kunde inte skriva named.conf här:\n"
+"%s\n"
+
+#, c-format
+msgid ""
+"Error: couldnt write file root.hints here:\n"
+"%s\n"
+msgstr "Fel: kunde inte skriva filen root.hints här:\n"
+"%s\n"
+
+#, c-format
+msgid ""
+"Error: couldnt write file localhost here:\n"
+"%s\n"
+msgstr "Fel: kunde inte skriva filen localhost här:\n"
+"%s\n"
+
+#, c-format
+msgid ""
+"Error: couldnt write file 127.0.0 here:\n"
+"%s\n"
+msgstr "Fel: kunde inte skriva filen 127.0.0 här:\n"
+"%s\n"
+
+msgid "Error copying /etc/localtime, the file doesnt exist\n"
+msgstr "Fel när /etc/localtime skulle kopieras, filen finns inte\n"
+
+#, c-format
+msgid "GBINDADMIN %s add a default configuration ?\n"
+msgstr "GBINDADMIN %s lägg till en standardkonfiguration ?\n"
+
+#, c-format
+msgid ""
+"Could not find all neccesary files in BIND's chroot directory.\n"
+"Should the missing files and directories be added here ? :\n"
+"%s\n"
+msgstr "Kunde inte hitta alla nödvändiga filer i BIND's chroot-katalog.\n"
+"Ska dom saknade filerna och katalogerna skapas här ? :\n"
+"%s\n"
+
+msgid "The domain name is too short, the domain was not added.\n"
+msgstr "Domännamnet är för kort, domänen lades inte till.\n"
+
+msgid "The network address is too short, the domain was not added.\n"
+msgstr "Nätverksadressen är för kort, domänen lades inte till.\n"
+
+msgid "The address is not valid\n"
+msgstr "Adressen är inte giltig\n"
+
+#, c-format
+msgid ""
+"Domain not added. Could not find named.conf here:\n"
+"%s\n"
+msgstr "Domänen lades inte till. Kunde inte hitta named.conf här:\n"
+"%s\n"
+
+msgid "This forward zone already existed, the domain was not added.\n"
+msgstr "Den här framlänges-zonen fanns redan, domänen lades inte till.\n"
+
+msgid "This reverse zone already existed, the domain was not added.\n"
+msgstr "Den här baklänges-zonen fanns redan, domänen lades inte till.\n"
+
+#, c-format
+msgid ""
+"Couldnt write the forward zone file here:\n"
+"%s\n"
+msgstr "Kunde inte skriva framlänges-zonfilen här:\n"
+"%s\n"
+
+#, c-format
+msgid ""
+"Couldnt write reverse zone file here: \n"
+"%s\n"
+msgstr "Kunde inte skriva baklänges-zonfilen här:\n"
+"%s\n"
+
+msgid "The hostname is too short, the resource was not added.\n"
+msgstr "Värdnamnet är för kort, resursen lades inte till.\n"
+
+msgid "The IP-address or hostname is too short, the resource was not added.\n"
+msgstr "IP-Adressen eller värdnamnet är för kort, resursen lades inte till.\n"
+
+#, c-format
+msgid "Resource not added. Could not find the forward zone here: %s\n"
+msgstr "Resursen lades inte till. Kunde inte inte hitta framlänges-zonen här: %s\n"
+
+#, c-format
+msgid "Resource not added. Could not find the reverse zone here: %s\n"
+msgstr "Resursen lades inte till. Kunde inte hitta baklänges-zonen här: %s\n"
+
+msgid "A PTR record for this resource was also added to the reverse zone\n"
+msgstr "En PTR instans för den här resursen lades även till i baklänges-zonen\n"
+
+#, c-format
+msgid ""
+"Error: Failed to add the system group:\n"
+"%s\n"
+"with command: %s\n"
+msgstr "Fel: Misslyckades med att lägga till systemgruppen:\n"
+"%s\n"
+"med kommandot: %s\n"
+
+#, c-format
+msgid ""
+"Error: Failed to add the system user:\n"
+"%s\n"
+"with command: %s\n"
+msgstr "Fel: Misslyckades med att lägga till systemanvändaren:\n"
+"%s\n"
+"med kommandot: %s\n"
+
+#, c-format
+msgid ""
+"Error: Failed to add the system user:\n"
+"%s\n"
+msgstr "Fel: Misslyckades med att lägga till systemanvändaren:\n"
+"%s\n"
+
+#, c-format
+msgid "Couldnt open system log here: %s\n"
+msgstr "Kunde inte öppna systemloggen här: %s\n"
+
+#, c-format
+msgid "Could not write system log here: %s\n"
+msgstr "Kunde inte skriva systemloggen här: %s\n"
+
+msgid "Domain name"
+msgstr "Domän-namn"
+
+msgid "Network address or range"
+msgstr "Nätverksadress eller intervall"
+
+msgid "DNS type"
+msgstr "DNS-typ"
+
+msgid "example.org"
+msgstr ""
+
+msgid "192.168.0 or 192.168.0.16-42 or 2001:0db8:85a3:08d3:1319:8a2e:0370"
+msgstr ""
+
+msgid "master"
+msgstr ""
+
+msgid "slave"
+msgstr ""
+
+msgid "Delete the selected domain."
+msgstr "Ta bort den valda domänen."
+
+msgid "Make changes to the selected domain."
+msgstr "Gör ändringar i den valda domänen"
+
+msgid "Change"
+msgstr "Ändra"
+
+msgid "Domain resources:"
+msgstr "Domänresurser:"
+
+msgid "Resource type"
+msgstr "Resurstyp"
+
+msgid "Hostname+Domainname"
+msgstr "Värdnamn+Domännamn"
+
+msgid "IP-address, MX Mailserver priority or CNAME host alias"
+msgstr "IP-adress, MX Mailserver-prioritet eller CNAME värdalias"
+
+msgid "Nameserver (NS-Record)"
+msgstr "Namnserver (NS-Record)"
+
+msgid "Mailserver (MX)"
+msgstr "Mailserver (MX)"
+
+msgid "Authoritive (IPv4 A-Record)"
+msgstr "Auktoritär (IPv4 A-Record)"
+
+msgid "Authoritive (IPv6 AAAA-Record)"
+msgstr "Autktoritär (IPv6 AAAA-Record)"
+
+msgid "Machine alias (CNAME)"
+msgstr "Maskinalias (CNAME)"
+
+msgid "A DNS server: dns1.example.org"
+msgstr "En DNS server: dns1.example.org"
+
+msgid "192.168.0.1 or 5F05:2000:80AD:5800:0058:0800:2023:1D71"
+msgstr ""
+
+msgid "Delete the selected resource."
+msgstr "Ta bort den valda resursen."
+
+msgid "Activate"
+msgstr "Aktivera"
+
+msgid "Deactivate"
+msgstr "Deaktivera"
+
+msgid "Restart"
+msgstr "Starta om"
+
+msgid "Settings"
+msgstr "Inställningar"
+
+msgid "Reload zones"
+msgstr "Ladda om zoner"
+
+msgid "Help"
+msgstr "Hjälp"
+
+msgid "Credits"
+msgstr "Credits"
+
+msgid "Quit"
+msgstr "Avsluta"
+
+msgid "Domains"
+msgstr "Domäner"
+
+msgid "Root servers"
+msgstr "Rootservrar"
+
+msgid "Resolvers"
+msgstr "Upplösare"
+
+msgid "System log"
+msgstr "Systemlogg"
+
+msgid "Verify domains"
+msgstr "Verifiera domäner"
+
+msgid "Information: cant read version"
+msgstr "Information: kan inte utläsa version"
+
+msgid "Status: unknown"
+msgstr "Status: okänd"
+
+msgid "You can also run ifconfig and other commands here."
+msgstr "Du kan också köra ifconfig eller andra kommandon här."
+
+msgid "Author: "
+msgstr "Författare: "
+
+msgid "I want to thank the following for their contributions:"
+msgstr "Jag vill tacka följande för deras bidrag:"
+
+msgid ""
+"The ISC BIND developers.\n"
+"\n"
+msgstr "Utvecklarna av ISC BIND.\n"
+"\n"
+
+msgid "for"
+msgstr "för"
+
+msgid "for the program icons.\n"
+msgstr "för programikonerna.\n"
+
+msgid "for maintaining the Debian package."
+msgstr "för handhavande av Debian-paketen."
+
+msgid "for the RPM spec file."
+msgstr "för RPM spec-filen."
+
+msgid "And all translators:"
+msgstr "Och alla översättare:"
+
+msgid "Afrikaans"
+msgstr ""
+
+msgid "Amharic"
+msgstr ""
+
+msgid "Arabic"
+msgstr ""
+
+msgid "Azerbaijani"
+msgstr ""
+
+msgid "Basque"
+msgstr ""
+
+msgid "Bulgarian"
+msgstr ""
+
+msgid "Breton"
+msgstr ""
+
+msgid "Brittish-English"
+msgstr ""
+
+msgid "Bosnian"
+msgstr ""
+
+msgid "Byelorussian"
+msgstr ""
+
+msgid "Catalan"
+msgstr ""
+
+msgid "Chinese"
+msgstr ""
+
+msgid "Chinese-Taiwan"
+msgstr ""
+
+msgid "Croatian"
+msgstr ""
+
+msgid "Czech"
+msgstr ""
+
+msgid "Danish"
+msgstr ""
+
+msgid "Dutch"
+msgstr ""
+
+msgid "Esperanto"
+msgstr ""
+
+msgid "Estonian"
+msgstr ""
+
+msgid "Finnish"
+msgstr ""
+
+msgid "French"
+msgstr ""
+
+msgid "Galician"
+msgstr ""
+
+msgid "German"
+msgstr ""
+
+msgid "Greek"
+msgstr ""
+
+msgid "Hebrew"
+msgstr ""
+
+msgid "Hini"
+msgstr ""
+
+msgid "Hungarian"
+msgstr ""
+
+msgid "Icelandic"
+msgstr ""
+
+msgid "Indonesian"
+msgstr ""
+
+msgid "Irish"
+msgstr ""
+
+msgid "Italian"
+msgstr ""
+
+msgid "Japanese"
+msgstr ""
+
+msgid "Korean"
+msgstr ""
+
+msgid "Kurdish"
+msgstr ""
+
+msgid "Latvian-Lettish"
+msgstr ""
+
+msgid "Lithuanian"
+msgstr ""
+
+msgid "Macedonian"
+msgstr ""
+
+msgid "Maori"
+msgstr ""
+
+msgid "Maltese"
+msgstr ""
+
+msgid "Norwegian"
+msgstr ""
+
+msgid "Polish"
+msgstr ""
+
+msgid "Portuguese"
+msgstr ""
+
+msgid "Portuguese-Brazil"
+msgstr ""
+
+msgid "Romanian"
+msgstr ""
+
+msgid "Russian"
+msgstr ""
+
+msgid "Serbian"
+msgstr ""
+
+msgid "Slovak"
+msgstr ""
+
+msgid "Slovenian"
+msgstr ""
+
+msgid "Spanish"
+msgstr ""
+
+msgid "Swedish"
+msgstr "Svenska"
+
+msgid "Tamil"
+msgstr ""
+
+msgid "Thai"
+msgstr ""
+
+msgid "Turkish"
+msgstr ""
+
+msgid "Traditional Chinese"
+msgstr ""
+
+msgid "Ukrainian"
+msgstr ""
+
+msgid "Vietnamese"
+msgstr ""
+
+msgid "Wallon"
+msgstr ""
+
+msgid "Welch"
+msgstr ""
+
+msgid "Close"
+msgstr "Stäng"
+
+msgid "Missing domain name, domain not deleted\n"
+msgstr "Saknat domännamn, domänen ej borttagen\n"
+
+msgid "Missing network address, domain not deleted\n"
+msgstr "Saknad nätverksadress, domänen ej borttagen\n"
+
+#, c-format
+msgid ""
+"Error: could not run remove zone directory command:\n"
+"%s\n"
+msgstr "Fel: kunde inte köra ta bort zonkatalog kommandot:\n"
+"%s\n"
+
+#, c-format
+msgid "Could not open named.conf here: %s\n"
+msgstr "Kunde inte öppna named.conf här: %s\n"
+
+#, c-format
+msgid "Could not write named.conf here: %s\n"
+msgstr "Kunde inte skriva named.conf här: %s\n"
+
+msgid "Missing domain type, resource not deleted\n"
+msgstr "Saknat domännamn, resursen ej borttagen\n"
+
+msgid "Missing domain name, resource not deleted\n"
+msgstr "Saknat domännamn, resursen ej borttagen\n"
+
+msgid "Missing forward domain address, resource not deleted\n"
+msgstr "Saknad framlänges domänadress, resursen ej borttagen\n"
+
+msgid "Missing resource type, resource not deleted\n"
+msgstr "Saknad resurstyp, resursen ej borttagen\n"
+
+msgid "Missing resource hostname, resource not deleted\n"
+msgstr "Saknat resursvärdnamn, resursen ej borttagen\n"
+
+msgid "Missing forward resource address, resource not deleted\n"
+msgstr "Saknad framlänges resursadress, resursen ej borttagen\n"
+
+#, c-format
+msgid ""
+"Could not open the forward zone file here:\n"
+"%s\n"
+msgstr "Kunde inte öppna framlänges-zonfilen här:\n"
+"%s\n"
+
+#, c-format
+msgid ""
+"Could not write the forward zone file here:\n"
+"%s\n"
+msgstr "Kunde inte skriva framlänges-zonfilen här:\n"
+
+#, c-format
+msgid ""
+"Could not open the reverse zone file here:\n"
+"%s\n"
+msgstr "Kunde inte öppna baklänges-zonfilen här:\n"
+"%s\n"
+
+#, c-format
+msgid ""
+"Could not write the reverse zone file here:\n"
+"%s\n"
+msgstr "Kunde inte skriva baklänges-zonfilen här:\n"
+"%s\n"
+
+#, c-format
+msgid "GBINDADMIN %s domain settings"
+msgstr "GBINDADMIN %s domäninställningar"
+
+msgid "Domain settings:"
+msgstr "Domäninställningar:"
+
+msgid " Domain name: "
+msgstr " Domännamn: "
+
+msgid "some.domain.org"
+msgstr "någon.domän.org"
+
+msgid " Address range: "
+msgstr " Adressintervall: "
+
+msgid "192.168.0.1-254"
+msgstr ""
+
+msgid " Domain type: "
+msgstr " Domäntyp: "
+
+msgid " Administrator email: "
+msgstr " Administratörens email: "
+
+msgid "hostmaster@example.org"
+msgstr "hostmaster@example.org"
+
+msgid " Domain serial: "
+msgstr " Domän-serienummer: "
+
+msgid "Year+Month+Day+A 2-digit serial, IE: 2006040255"
+msgstr "ÅR+Månad+Dag+Ett 2-siffrigt serinummer, IE: 2006040255"
+
+#, c-format
+msgid ""
+"Error: could not find the sites forward zone here:\n"
+"%s\n"
+msgstr "Fel: kunde inte hitta sitens framlängesadress här:\n"
+
+msgid " Allow update: "
+msgstr " Tillåt uppdateringar: "
+
+msgid ""
+"Hosts allowed to submit dynamic DNS updates (DDNS) delimited with a \";\" "
+"IE: 127.0.0.1; 192.168.0.0/24; any; or none;"
+msgstr "Värdar tillåtna att skicka dynamiska DNS-uppdateringar (DDNS) avgränsade med \";\" "
+"IE: 127.0.0.1; 192.168.0.0/24; any; none;"
+
+msgid " Allow transfer: "
+msgstr " Tillåt överföring: "
+
+msgid ""
+"Hosts that are allowed to make zone transfers (copy the entire zone) "
+"delimited with a \";\" IE: 127.0.0.1; 192.168.0.0/24; any; or none;"
+msgstr "Värdar tillåtna att göra zon-överföringar (kopiera hela zonen) "
+"avgränsade med \";\" IE: 127.0.0.1; 192.168.0.0/24; any; none;"
+
+msgid " Allow query: "
+msgstr " Tillåt förfråganden: "
+
+msgid ""
+"Hosts allowed to query this DNS, delimited with a \";\" IE: 127.0.0.1; "
+"192.168.0.0/24; any; or none;"
+msgstr "Värdar tillåtna att fråga den här DNSen, avgränsade med \";\" IE: 127.0.0.1; "
+"192.168.0.0/24; any; or none;"
+
+msgid " Send notifications: "
+msgstr " Skicka notifieringar: "
+
+msgid "yes"
+msgstr "ja"
+
+msgid "no"
+msgstr "nej"
+
+msgid "explicit"
+msgstr "explicit"
+
+msgid " Also notify: "
+msgstr " Notifiera även: "
+
+msgid ""
+"Servers that should recieve zone update notifications delimited with a \";\" "
+"IE: 127.0.0.1; 192.168.0.100;"
+msgstr "Servrar som borde ta emot zon-uppdateringar avgränsade med \";\" "
+"IE: 127.0.0.1; 192.168.0.100;"
+
+msgid " Allow notify: "
+msgstr " Tillåt notifiera: "
+
+msgid ""
+"Servers allowed to notify this server for zone updates delimited with a \";\" "
+" IE: 127.0.0.1; 192.168.0.100; any; or none;"
+msgstr "Servrar tillåtna att notifiera den här servern för zon-uppdateringar avgränsade med \";\" IE: 127.0.0.1; 192.168.0.100; any; or none;"
+
+
+msgid " Domain statistics: "
+msgstr " Domänstatistik: "
+
+msgid " Master domains: "
+msgstr " Masterdomäner: "
+
+msgid ""
+"IP-addresses of the master domains delimited with a \";\" IE: 127.0.0.1; "
+"192.168.0.100; none;"
+msgstr "Masterdomänernas IP-adresser avgränsade med \";\" IE: 127.0.0.1; "
+"192.168.0.100; none;"
+
+#, c-format
+msgid ""
+"Error: could not open named.conf here:\n"
+"%s\n"
+msgstr "Fel: kunde inte öppna named.conf här:\n"
+"%s\n"
+
+#, c-format
+msgid ""
+"Error: named.conf does not exist here:\n"
+"%s\n"
+msgstr "Fel: named.conf finns inte här:\n"
+"%s\n"
+
+#, c-format
+msgid ""
+"Error: Forward zone does not exist here:\n"
+"%s\n"
+msgstr "Fel: Framlänges-zonen finns inte här\n"
+"%s\n"
+
+#, c-format
+msgid ""
+"Error: Reverse zone does not exist here:\n"
+"%s\n"
+msgstr "Fel: baklänges-zonen finns inte här:\n"
+"%s\n"
+
+msgid "DNS Type not set, no changes made.\n"
+msgstr "DNS-typen är inte specificerad, inga ändringar gjorda.\n"
+
+msgid "DNS statistics not set, setting it to yes\n"
+msgstr "DNS statistik ej specifierad, sätter den till ja\n"
+
+msgid "DNS notification not set, setting it to no.\n"
+msgstr "DNS notifieringar ej specificerat, sätter den till nej\n"
+
+msgid ""
+"Error: You have selected a slave domain.\n"
+"Slave domains requires master domain servers.\n"
+msgstr "Fel: Du har valt en slavdomän.\n"
+"Slavdomäner behöver master domäner.\n"
+
+#, c-format
+msgid ""
+"Error: This domain already exists here:\n"
+"%s\n"
+msgstr "Fel: Den här domänen finns redan här:\n"
+"%s\n"
+
+#, c-format
+msgid ""
+"Error: Cannot write the forward zone here:\n"
+"%s\n"
+msgstr "Fel: Kan inte skriva framlänges-zonen här:\n"
+"%s\n"
+
+#, c-format
+msgid ""
+"Error: Cannot write the reverse zone here:\n"
+"%s\n"
+msgstr "Fel: kan inte skriva baklänges-zonen här:\n"
+"%s\n"
+
+#, c-format
+msgid ""
+"Error: Cannot write named.conf here:\n"
+"%s\n"
+msgstr "Fel: kan inte skriva named.conf här:\n"
+"%s\n"
+
+msgid "Domain type changed to slave.\n"
+msgstr "Domäntypen ändrades till slav.\n"
+
+msgid "Domain type changed to master.\n"
+msgstr "Domäntypen ändrades till master.\n"
+
+msgid "Generate secret key"
+msgstr "Generera hemlig nyckel"
+
+msgid ""
+"Generate secret rndc key. The server has to be restarted afterwards to "
+"update its secret key."
+msgstr "Generera hemlig rndc nyckel. Servern måste startas om efteråt så den "
+"uppdaterar sin hemliga nyckel."
+
+msgid "The randomized file does not exist here: /dev/urandom\n"
+msgstr "Den randomiserade filen finns inte här: /dev/urandom\n"
+
+#, c-format
+msgid ""
+"Updating rndc key with rndc-confgen failed with command:\n"
+"%s\n"
+msgstr "Uppdatering av rndc-nyckeln med rndc-confgen misslyckades med följande kommando:\n"
+"%s\n"
+
+msgid "Error: New key not generated, rndc-confgen failed.\n"
+msgstr "Fel: Ny nyckel ej genererad, rndc-confgen misslyckades.\n"
+
+#, c-format
+msgid ""
+"Error: cannot open file:\n"
+"%s\n"
+msgstr "Fel: kan ej öppna fil:\n"
+"%s\n"
+
+#, c-format
+msgid ""
+"Error: could not find the secret key line in:\n"
+"%s\n"
+msgstr "Fel: kan ej hitta hemliga nyckelraden i:\n"
+"%s\n"
+
+#, c-format
+msgid ""
+"Error: cannot write named.conf here:\n"
+"%s\n"
+msgstr "Fel: kan ej skriva named.conf här:\n"
+"%s\n"
+
+#, c-format
+msgid "Error running command: %s\n"
+msgstr "Fel vid körning av kommando: %s\n"
+
+#, c-format
+msgid "Error: cannot open file: %s\n"
+msgstr "Fel: kan ej öppna filen: %s\n"
+
+#, c-format
+msgid "Error: cannot write rndc.conf here: %s\n"
+msgstr "Fel: kan ej skriva rndc.conf här: %s\n"
+
+msgid ""
+"\n"
+"Key generation and configuration updates successful.\n"
+"The server needs to be restarted now so it updates its internal key.\n"
+"This must be done so that rndc is allowed to connect and zones can be "
+"reloaded.\n"
+msgstr "\nNyckelgeneration och konfigurations-uppdateringar lyckades.\n"
+"Servern måste startas om nu så att den uppdaterar sin interna nyckel.\n"
+"Det här måste göras så att rndc är tillåten att ansluta och zonerna kan "
+"laddas om.\n"
+
+msgid "You must add a nameserver (NS-Record) for this domain now.\n"
+msgstr "Du måste lägga till en namnserver (NS-Record) för den här domänen nu.\n"
+
+#, c-format
+msgid ""
+"Could not find:\n"
+"%s\n"
+msgstr "Kunde inte hitta:\n"
+"%s\n"
+
+msgid "A DNS Server: dns1.example.org"
+msgstr "En DNS-server: dns1.example.org"
+
+msgid ""
+"An IPv4 or IPv6 address: 192.168.0.30 or "
+"5F05:2000:80AD:5800:0058:0800:2023:1D71"
+msgstr "En IPv4 eller IPv6 adress: 192.168.0.30 eller "
+"5F05:2000:80AD:5800:0058:0800:2023:1D71"
+
+msgid "A mail server: mail1.example.org"
+msgstr "En mailserver: mail1.example.org"
+
+msgid ""
+"The priority of this mail server: 10 or 20 etc, 10 beeing the highest "
+"priority of these."
+msgstr "Prioriteten på den här mailservern: 10 eller 30 etc, 10 är den högsta "
+"prioriteten av dessa."
+
+msgid "The hostname of some host: router.example.org"
+msgstr "Värdnamnet på någon värd: router.example.org"
+
+msgid "The IPv4 address of this host: 192.168.0.100"
+msgstr "IPv4-adressen för den här värden: 192.168.0.100"
+
+msgid "The IPv6 address of this host: 5F05:2000:80AD:5800:0058:0800:2023:1D71"
+msgstr "IPv6-adressen för den här värden: 5F05:2000:80AD:5800:0058:0800:2023:1D71"
+
+msgid ""
+"The hostname of some host that already has an A record but not the name "
+"server: router.example.org"
+msgstr "Värdnamnet för någon värd som redan har ett A-record men inte samma server: router.example.org"
+
+msgid "The host alias: router.example.org"
+msgstr "Värdalias för värden router.example.org"
+
+msgid ""
+"The server must be activated in order to reload its zone and configuration "
+"data.\n"
+msgstr "Servern måste vara aktiverad för att ladda om sina zoner och konfigurationsdata.\n"
+
+msgid ""
+"Error: could not run rndc reload, maybe you need to generate\n"
+"a secret key in the settings and restart the server ?\n"
+msgstr "Fel: kunde inte köra rndc reload, du kanske måste generera\n"
+"en hemlig nyckel i inställningarna och starta om servern ?\n"
+
+msgid ""
+"The servers zones and configuration data has been successfully reloaded.\n"
+msgstr "Serverns zoner och konfigurationsdata har laddats om utan problem.\n"
+
+#, c-format
+msgid "Could not run command: %s\n"
+msgstr "Kunde inte köra kommandot: %s\n"
+
+#, c-format
+msgid "Error: can not write resolv.conf here: %s\n"
+msgstr "Fel: kunde inte skriva resolv.conf här: %s\n"
+
+msgid "The settings directory could not be created, run gbindadmin as root\n"
+msgstr "Inställningskatalogen kunde inte skapas, kör gbindadmin som root\n"
+
+msgid "Secret key not found."
+msgstr "Hemliga nyckeln ej hittad."
+
+#, c-format
+msgid "GBINDADMIN %s settings"
+msgstr "GBINDADMIN %s inställningar"
+
+msgid "Settings:"
+msgstr "Inställningar:"
+
+msgid " Path to the chroot directory: "
+msgstr " Sökväg till chroot-katalogen: "
+
+msgid " Path to resolv.conf: "
+msgstr " Sökväg till resolv.conf: "
+
+msgid " Path to the system log: "
+msgstr " Sökväg till systemloggen: "
+
+msgid "Set version failed\n"
+msgstr "Sätta version misslyckades\n"
+
+#, c-format
+msgid " Information: %s"
+msgstr " Information: %s"
+
+msgid " ISC BIND is not installed or not in your path."
+msgstr " ISC BIND är inte installerad eller inte i din sökväg."
+
+msgid ""
+"\n"
+"\n"
+"1. Adding master domains:\n"
+msgstr "\n\n1. Lägga till masterdomäner:\n"
+
+msgid "   To add a master domain you will need a static IP-address range.\n"
+msgstr "   För att lägga till en masterdomän behöver du ett statiskt IP-Adressintervall.\n"
+
+msgid "   Supply the 2 entries with domain specific information.\n"
+msgstr "   Ange domänspecifik information i de 2 skrivrutorna.\n"
+
+msgid "   Select master in the third box.\n"
+msgstr "   Välj master i den tredje boxen.\n"
+
+msgid "   Click the add button to add this domain.\n"
+msgstr "   Klicka på läggtill knappen för att lägga till den här domänen.\n"
+
+msgid ""
+"   Now click on the domain and then add a name server in the resource manager.\n"
+msgstr "   Klicka nu på domänen och lägg därefter till en namnserver i resurshanteraren.\n"
+
+msgid "\n"
+msgstr ""
+
+msgid ""
+"   When the domain and its resources is set up and functional you call the "
+"ISP.\n"
+msgstr "   När domänen och dess resurser är uppsatta ringer du din internetleverantör.\n"
+
+msgid "   The ISP will then delegate control over your domain name to you.\n"
+msgstr "   Internetleverantören delegerar då kontrollen över domänen till dig.\n"
+
+msgid "   This may or may not be true depending on how your ISP does things.\n"
+msgstr "   Det här kan vara sant beroende på hur din internetleverantör hanterar det.\n"
+
+msgid ""
+"   Make sure its sending notifies for all zones in the system log tab.\n"
+msgstr "   Se till att din server skickar notifieringar för alla dina zoner i systemloggsfliken.\n"
+
+msgid "2. Adding slave domains:\n"
+msgstr "2. Lägga till slavdomäner:\n"
+
+msgid "   To add a slave domain you will need a static IP-address.\n"
+msgstr "   För att lägga till slavdomäner behöver du en statisk IP-adress.\n"
+
+msgid "   Select slave in the third box.\n"
+msgstr "   Välj slav i den tredje boxen.\n"
+
+msgid ""
+"   Add more resources as you like and when youre satisfied you can activate "
+"the server.\n"
+msgstr "   Lägg till fler resurser som du vill och när du är nöjd aktiverar du servern.\n"
+
+msgid "3. Adding forward caching domains: (Not completed)\n"
+msgstr "3. Lägga till forward cachande domäner: (Ej klart än)\n"
+
+msgid "4. Adding stub domains: (Not completed)\n"
+msgstr "4. Lägga till stubdomäner: (Ej klart än)\n"
+
+msgid "5. Altering domains:\n"
+msgstr "5. Ändra domäner:\n"
+
+msgid "   Altering a domain is done by selecting a domain in the domain tab.\n"
+msgstr "   Att ändra en domän görs genom att välja en domän i domänfliken.\n"
+
+msgid ""
+"   Now click the change button and a domain settings window will pop up.\n"
+msgstr "   Klicka nu på ändra-knappen och ett domäninställningsfönster dyker upp.\n"
+
+msgid "   In this window you can select how the server will function.\n"
+msgstr "   I det här fönstret kan du välja hur servern ska fungera.\n"
+
+msgid ""
+"   If the domain name is changed then all references to \"new.domain.se\" "
+"will\n"
+msgstr "   Om domännamnet ändras så kommer alla referenser till \"ny.domän.se\"\n"
+
+msgid ""
+"   also be altered using sed so first make sure this is what you want to "
+"do.\n"
+msgstr "   också att ändras med sed, så se först till att det här är vad du vill göra.\n"
+
+msgid ""
+"   IE: dont do this if you want to change a domain called hello.se and "
+"another domain\n"
+msgstr "   IE: gör inte det här om du vill ändra en domän kallad hello.se och "
+"en annan domän\n"
+
+msgid ""
+"   is called hello.se.happy.se this site will then be called new.domain.se."
+"happy.se.\n"
+msgstr "   kallas hello.se.happy.se den siten kommer då att kallas new.domain.se.happy.se.\n"
+
+msgid ""
+"   If the domain type is changed the server will automatically transform to "
+"this type.\n"
+msgstr "   Om domäntypen ändras så kommer servern automatiskt att transformera till "
+"den här typen.\n"
+
+msgid ""
+"   Any changes must be confirmed by clicking the apply button and requires a "
+"reload.\n"
+msgstr "   Ändringar måste godkännas genom att klicka på verkställ-knappen och kräver en "
+"omladdning.\n"
+
+msgid "6. Zone reloads and key generation:\n"
+msgstr "6. Zon-omladdningar och nyckelskapande:\n"
+
+msgid ""
+"   When using GBINDADMIN for the first time you should go to the settings "
+"and generate a new key.\n"
+msgstr "   När du använder GBINDADMIN för första gången bör du gå till inställningarna "
+"och generera en ny hemlig nyckel.\n"
+
+msgid ""
+"   The key is used by rndc to connect to the server and configuring it.\n"
+msgstr "   Nyckeln används av rndc för att ansluta till servern och konfigurera den.\n"
+
+msgid ""
+"   If the current rndc.conf key and the chrooted named.conf's key differs "
+"then\n"
+msgstr "   Om den nuvarande rndc.conf och den chrootade named.conf's nycklar diffar så\n"
+
+msgid ""
+"   rndc wont be able to connect to the server and you wont be able to reload "
+"the zones.\n"
+msgstr "   kan inte rndc ansluta till servern och då kan du inte ladda om zonerna.\n"
+
+#, c-format
+msgid "%s %s information"
+msgstr ""
+
+msgid "Status: Deactivated"
+msgstr "Status: Deaktiverad"
+
+msgid "Status: Activated"
+msgstr "Status: Aktiverad"
+
+msgid ""
+"Received less then 20 lines of root server information. Make sure that the "
+"resolvers tab has working nameservers listed.\n"
+msgstr "Emottog mindre än 20 rader med rootserverinformation. Se till att "
+"upplösningsfliken har fungerande namnservrar listade.\n"
+
+#, c-format
+msgid ""
+"Can not write root.hints here:\n"
+"%s\n"
+msgstr "Kunde inte skriva root.hints här:\n"
+"%s\n"

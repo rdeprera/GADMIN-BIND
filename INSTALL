@@ -1,0 +1,28 @@
+
+		    Installation instructions:
+		----------------------------------
+
+ GAdmin-BIND cant be installed without giving the correct configure options.
+
+ Named will be running in a chroot environment and the default location is /var/named
+ GAdmin-BIND will set up this environment for you if it is missing.
+
+ See the Autoinstall file for the various configure options.
+
+ This software also requires the following binaries:
+ BIND [named, rndc, rndc-confgen, dig] mv, cp, mknod, chmod, chown and sed.
+
+ GAdmin-BIND currently supports the following systems to a varying degree:
+ Linux
+ FreeBSD
+ OpenBSD
+ NetBSD
+ Darwin Mac OSX
+ AIX
+ HP-UX
+ Solaris
+ SunOS
+
+ If GAdmin-BIND doesnt work flawlessly on your system and you know how to correct it
+ then send a mail explaining how to this in detail, preferrably with a patch to:
+ magnus-swe@telia.com (comments and questions are also welcome).

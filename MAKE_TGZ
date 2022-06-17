@@ -1,0 +1,16 @@
+#!/bin/sh
+
+version='0.2.5'
+beta=''
+
+make clean
+rm -f config.cache
+rm -f Makefile
+rm -f config.h
+rm -f config.log
+rm -f config.status
+rm -f *.bak
+rm -f stamp*
+rm -f po/*.gmo
+cd ..
+tar -hzcvf gadmin-bind-$version$beta.tar.gz gadmin-bind-$version

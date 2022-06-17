@@ -1,0 +1,2 @@
+chars_are_digits.o: chars_are_digits.c /usr/include/stdc-predef.h
+/usr/include/stdc-predef.h:

@@ -1,0 +1,172 @@
+/* config.h.in.  Generated from configure.in by autoheader.  */
+
+/* Path to the chroot /var/named directory */
+#undef CHROOT_PATH
+
+/* Seconds to wait from starting named until the log tab is updated */
+#undef CMD_SLEEP_LOG_SECS
+
+/* Path to the dig binary */
+#undef DIG_BINARY
+
+/* always defined to indicate that i18n is enabled */
+#undef ENABLE_NLS
+
+/* needed for gettext... */
+#undef GETTEXT_PACKAGE
+
+/* The groupadd binary */
+#undef GROUPADD_BINARY
+
+/* Path to group */
+#undef GROUP_FILE
+
+/* Path to gshadow */
+#undef GSHADOW_FILE
+
+/* Define to 1 if you have the `bind_textdomain_codeset' function. */
+#undef HAVE_BIND_TEXTDOMAIN_CODESET
+
+/* Define to 1 if you have the `dcgettext' function. */
+#undef HAVE_DCGETTEXT
+
+/* Define if the GNU gettext() function is already present or preinstalled. */
+#undef HAVE_GETTEXT
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#undef HAVE_INTTYPES_H
+
+/* Define if your <locale.h> file defines LC_MESSAGES. */
+#undef HAVE_LC_MESSAGES
+
+/* Define to 1 if you have the <locale.h> header file. */
+#undef HAVE_LOCALE_H
+
+/* Define to 1 if you have the <memory.h> header file. */
+#undef HAVE_MEMORY_H
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#undef HAVE_STDINT_H
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#undef HAVE_STDLIB_H
+
+/* Define to 1 if you have the <strings.h> header file. */
+#undef HAVE_STRINGS_H
+
+/* Define to 1 if you have the <string.h> header file. */
+#undef HAVE_STRING_H
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#undef HAVE_SYS_STAT_H
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#undef HAVE_SYS_TYPES_H
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#undef HAVE_UNISTD_H
+
+/* localstatedir */
+#undef LOCALSTATEDIR
+
+/* Path to the named binary */
+#undef NAMED_BINARY
+
+/* The user which named runs as */
+#undef NAMED_USER
+
+/* Name of package */
+#undef PACKAGE
+
+/* Define to the address where bug reports for this package should be sent. */
+#undef PACKAGE_BUGREPORT
+
+/* Define to the full name of this package. */
+#undef PACKAGE_NAME
+
+/* Define to the full name and version of this package. */
+#undef PACKAGE_STRING
+
+/* Define to the one symbol short name of this package. */
+#undef PACKAGE_TARNAME
+
+/* Define to the version of this package. */
+#undef PACKAGE_VERSION
+
+/* Path to passwd */
+#undef PASSWD_FILE
+
+/* Path to the proc filesystem */
+#undef PROC_PATH
+
+/* Path to resolv.conf */
+#undef RESOLV_PATH
+
+/* Path to the rndc binary */
+#undef RNDC_BINARY
+
+/* Path to rndc.conf */
+#undef RNDC_CONF
+
+/* Path to the rndc-confgen binary */
+#undef RNDC_CONFGEN_BINARY
+
+/* Path to the sed binary */
+#undef SED_BINARY
+
+/* Path to settings directory etc/gadmin-bind */
+#undef SETTINGS_DIR
+
+/* Path to shadow */
+#undef SHADOW_FILE
+
+/* Define to 1 if you have the ANSI C header files. */
+#undef STDC_HEADERS
+
+/* sysconfdir */
+#undef SYSCONFDIR
+
+/* Path to the sysinit scripts directory */
+#undef SYSINIT_SCRIPTS_DIR
+
+/* Name of the sysinit script */
+#undef SYSINIT_SCRIPT_NAME
+
+/* Command for starting the server at boot */
+#undef SYSINIT_START_CMD
+
+/* Command for not starting the server at boot */
+#undef SYSINIT_STOP_CMD
+
+/* Path to syslog messages */
+#undef SYSLOG_PATH
+
+/* The useradd binary */
+#undef USERADD_BINARY
+
+/* using aix macros... */
+#undef USE_AIX
+
+/* using darwin macros... */
+#undef USE_DARWIN
+
+/* using freebsd macros... */
+#undef USE_FREEBSD
+
+/* using hpux macros... */
+#undef USE_HPUX
+
+/* using Linux macros... */
+#undef USE_LINUX
+
+/* using netbsd macros... */
+#undef USE_NETBSD
+
+/* using openbsd macros... */
+#undef USE_OPENBSD
+
+/* using sunos macros... */
+#undef USE_SUNOS
+
+/* Version number of package */
+#undef VERSION

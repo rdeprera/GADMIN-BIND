@@ -1,0 +1,240 @@
+dnl Process this file with autoconf to produce a configure script.
+
+AC_INIT(configure.in)
+
+AM_INIT_AUTOMAKE(gadmin-bind, 0.2.5)
+AM_CONFIG_HEADER(config.h)
+AM_MAINTAINER_MODE
+
+AC_CANONICAL_HOST
+AC_MSG_CHECKING([for OS type])
+case $host in
+    *-linux*)
+    AC_MSG_RESULT([Linux ($host) found.])
+    AC_DEFINE(USE_LINUX,1,[using linux macros...])
+    ;;
+    *-solaris*)
+    AC_MSG_RESULT([Solaris ($host) found.])
+    AC_DEFINE(USE_SUNOS,1,[using sunos macros...])
+    ;;
+    *-sunos*)
+    AC_MSG_RESULT([Solaris ($host) found.])
+    AC_DEFINE(USE_SUNOS,1,[using sunos macros...])
+    ;;
+    *-freebsd*)
+    AC_MSG_RESULT([Free BSD ($host) found.])
+    AC_DEFINE(USE_FREEBSD,1,[using freebsd macros...])
+    ;;
+    *-openbsd*)
+    AC_MSG_RESULT([Open BSD ($host) found.])
+    AC_DEFINE(USE_OPENBSD,1,[using openbsd macros...])
+    ;;
+    *-netbsd*)
+    AC_MSG_RESULT([Net BSD ($host) found.])
+    AC_DEFINE(USE_NETBSD,1,[using netbsd macros...])
+    ;;
+    *-darwin*)
+    AC_MSG_RESULT([Darwin Mac OS X ($host) found.])
+    AC_DEFINE(USE_DARWIN,1,[using darwin macros...])
+    ;;
+    *-aix*)
+    AC_MSG_RESULT([AIX ($host) found.])
+    AC_DEFINE(USE_AIX,1,[using aix macros...])
+    ;;
+    *-hpux*)
+    AC_MSG_RESULT([HP UX ($host) found.])
+    AC_DEFINE(USE_HPUX,1,[using hpux macros...])
+    ;;
+    *)
+    AC_MSG_RESULT([Unknown host found: ($host). Using Linux macros...])
+    AC_DEFINE(USE_LINUX,1,[using Linux macros...])
+    ;;
+esac
+
+AC_ISC_POSIX
+AC_PROG_CC
+AM_PROG_CC_STDC
+AC_HEADER_STDC
+
+pkg_modules="gtk+-2.0 >= 1.3.13"
+PKG_CHECK_MODULES(PACKAGE, [$pkg_modules])
+AC_SUBST(PACKAGE_CFLAGS)
+AC_SUBST(PACKAGE_LIBS)
+
+GETTEXT_PACKAGE=gadmin-bind
+AC_SUBST(GETTEXT_PACKAGE)
+AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE",[needed for gettext...])
+
+dnl Add the languages which your application supports here.
+ALL_LINGUAS="sv"
+AM_GLIB_GNU_GETTEXT
+
+dnl Use -Wall if we have gcc (added -lcrypt for crypt).
+changequote(,)dnl
+if test "x$GCC" = "xyes"; then
+  case " $CFLAGS " in
+  *[\ \	]-Wall[\ \	]*) ;;
+  *) CFLAGS="$CFLAGS -Wall" ;;
+  esac
+fi
+changequote([,])dnl
+
+
+dnl some dynamic defines and corrections for configure options
+SYSCONFDIR=`eval echo $sysconfdir`
+AC_SUBST(SYSCONFDIR)
+
+LOCALSTATEDIR=`eval echo $localstatedir`
+AC_SUBST(LOCALSTATEDIR)
+
+SBINDIR=`eval echo $sbindir`
+AC_SUBST(SBINDIR)
+
+test "x$prefix" = xNONE && prefix=$ac_default_prefix
+test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
+
+dnl Sysconfdir location
+AC_DEFINE_UNQUOTED(SYSCONFDIR,"`eval echo "${sysconfdir}"`",[sysconfdir])
+
+dnl Localstatedir location.
+AC_DEFINE_UNQUOTED(LOCALSTATEDIR,"`eval echo "${localstatedir}"`",[localstatedir])
+
+dnl Path to the chroot directory
+default_chroot_path=`eval echo $localstatedir`"/named"
+test "x$CHROOT_PATH" = x && CHROOT_PATH=$default_chroot_path
+AC_DEFINE_UNQUOTED(CHROOT_PATH,"`eval echo "$CHROOT_PATH"`",[Path to the chroot /var/named directory])
+AC_MSG_RESULT([Using chroot path: (${CHROOT_PATH})])
+
+dnl Path to rndc.conf
+default_rndc_conf=`eval echo $sysconfdir`"/rndc.conf"
+test "x$RNDC_CONF" = x && RNDC_CONF=$default_rndc_conf
+AC_DEFINE_UNQUOTED(RNDC_CONF,"`eval echo "$RNDC_CONF"`",[Path to rndc.conf])
+AC_MSG_RESULT([Using rndc.conf: (${RNDC_CONF})])
+
+dnl Path to resolv.conf
+default_resolv_conf=`eval echo $sysconfdir`"/resolv.conf"
+test "x$RESOLV_PATH" = x && RESOLV_PATH=$default_resolv_conf
+AC_DEFINE_UNQUOTED(RESOLV_PATH,"`eval echo "$RESOLV_PATH"`",[Path to resolv.conf])
+AC_MSG_RESULT([Using resolv.conf: (${RESOLV_PATH})])
+
+dnl Path to syslog messages .. or use the chrooted one ?
+default_syslog_file=`eval echo $localstatedir`"/log/messages"
+test "x$SYSLOG_PATH" = x && SYSLOG_PATH=$default_syslog_file
+AC_DEFINE_UNQUOTED(SYSLOG_PATH,"`eval echo "$SYSLOG_PATH"`",[Path to syslog messages])
+AC_MSG_RESULT([Using syslog file: (${SYSLOG_PATH})])
+
+dnl Path to the proc filesystem
+default_proc_path="/proc"
+test "x$PROC_PATH" = x && PROC_PATH=$default_proc_path
+AC_DEFINE_UNQUOTED(PROC_PATH,"`eval echo "$PROC_PATH"`",[Path to the proc filesystem])
+AC_MSG_RESULT([Using proc filesystem: (${PROC_PATH})])
+
+dnl Path to the settings directory.
+default_settings_dir=`eval echo $sysconfdir`"/gadmin-bind"
+test "x$SETTINGS_DIR" = x && SETTINGS_DIR=$default_settings_dir
+AC_DEFINE_UNQUOTED(SETTINGS_DIR,"`eval echo "$SETTINGS_DIR"`",[Path to settings directory etc/gadmin-bind])
+AC_MSG_RESULT([Using settings directory: (${SETTINGS_DIR})])
+
+dnl Path to the named binary
+default_named_binary="named"
+test "x$NAMED_BINARY" = x && NAMED_BINARY=$default_named_binary
+AC_DEFINE_UNQUOTED(NAMED_BINARY,"`eval echo "${NAMED_BINARY}"`",[Path to the named binary])
+AC_MSG_RESULT([Using bind binary: (${NAMED_BINARY})])
+
+dnl Path to the rndc binary
+default_rndc_binary="rndc"
+test "x$RNDC_BINARY" = x && RNDC_BINARY=$default_rndc_binary
+AC_DEFINE_UNQUOTED(RNDC_BINARY,"`eval echo "${RNDC_BINARY}"`",[Path to the rndc binary])
+AC_MSG_RESULT([Using rndc binary: (${RNDC_BINARY})])
+
+dnl Path to the rndc-confgen binary
+default_rndc_confgen_binary="rndc-confgen"
+test "x$RNDC_CONFGEN_BINARY" = x && RNDC_CONFGEN_BINARY=$default_rndc_confgen_binary
+AC_DEFINE_UNQUOTED(RNDC_CONFGEN_BINARY,"`eval echo "${RNDC_CONFGEN_BINARY}"`",[Path to the rndc-confgen binary])
+AC_MSG_RESULT([Using rndc-confgen binary: (${RNDC_CONFGEN_BINARY})])
+
+dnl Path to the sed binary
+default_sed_binary="sed"
+test "x$SED_BINARY" = x && SED_BINARY=$default_sed_binary
+AC_DEFINE_UNQUOTED(SED_BINARY,"`eval echo "${SED_BINARY}"`",[Path to the sed binary])
+AC_MSG_RESULT([Using sed binary: (${SED_BINARY})])
+
+dnl Path to the dig binary
+default_dig_binary="dig"
+test "x$DIG_BINARY" = x && DIG_BINARY=$default_dig_binary
+AC_DEFINE_UNQUOTED(DIG_BINARY,"`eval echo "${DIG_BINARY}"`",[Path to the dig binary])
+AC_MSG_RESULT([Using dig binary: (${DIG_BINARY})])
+
+dnl The user the server runs as
+default_named_user="nobody"
+test "x$NAMED_USER" = x && NAMED_USER=$default_named_user
+AC_DEFINE_UNQUOTED(NAMED_USER,"`eval echo "${NAMED_USER}"`",[The user which named runs as])
+AC_MSG_RESULT([Using bind user: (${NAMED_USER})])
+
+dnl The useradd binary
+default_useradd_binary="useradd"
+test "x$USERADD_BINARY" = x && USERADD_BINARY=$default_useradd_binary
+AC_DEFINE_UNQUOTED(USERADD_BINARY,"`eval echo "${USERADD_BINARY}"`",[The useradd binary])
+AC_MSG_RESULT([Using useradd binary: (${USERADD_BINARY})])
+
+dnl The groupadd binary
+default_groupadd_binary="groupadd"
+test "x$GROUPADD_BINARY" = x && GROUPADD_BINARY=$default_groupadd_binary
+AC_DEFINE_UNQUOTED(GROUPADD_BINARY,"`eval echo "${GROUPADD_BINARY}"`",[The groupadd binary])
+AC_MSG_RESULT([Using groupadd binary: (${GROUPADD_BINARY})])
+
+dnl Seconds to wait from starting named until the log tab is updated.
+default_cmd_sleep_log_secs=3
+test "x$CMD_SLEEP_LOG_SECS" = x && CMD_SLEEP_LOG_SECS=$default_cmd_sleep_log_secs
+AC_DEFINE_UNQUOTED(CMD_SLEEP_LOG_SECS,"`eval echo "$CMD_SLEEP_LOG_SECS"`",[Seconds to wait from starting named until the log tab is updated])
+AC_MSG_RESULT([Using sleep before log seconds: (${CMD_SLEEP_LOG_SECS})])
+
+dnl Command for starting the server at boot.
+default_sysinit_start_cmd="none"
+test "x$SYSINIT_START_CMD" = x && SYSINIT_START_CMD=$default_sysinit_start_cmd
+AC_DEFINE_UNQUOTED(SYSINIT_START_CMD,"`eval echo "$SYSINIT_START_CMD"`",[Command for starting the server at boot])
+AC_MSG_RESULT([Using sysinit start cmd: (${SYSINIT_START_CMD})])
+
+dnl Path to the systems sysinit scripts.
+dnl The gadmin-bind script is written in activate_button_clicked.c
+default_sysinit_scripts_dir="/etc/init.d"
+test "x$SYSINIT_SCRIPTS_DIR" = x && SYSINIT_SCRIPTS_DIR=$default_sysinit_scripts_dir
+AC_DEFINE_UNQUOTED(SYSINIT_SCRIPTS_DIR,"`eval echo "${SYSINIT_SCRIPTS_DIR}"`",[Path to the sysinit scripts directory])
+AC_MSG_RESULT([Using sysinit scripts dir: (${SYSINIT_SCRIPTS_DIR})])
+
+dnl The gadmin-bind script is written in activate_button_clicked.c
+default_sysinit_script_name="gadmin-bind"
+test "x$SYSINIT_SCRIPT_NAME" = x && SYSINIT_SCRIPT_NAME=$default_sysinit_script_name
+AC_DEFINE_UNQUOTED(SYSINIT_SCRIPT_NAME,"`eval echo "${SYSINIT_SCRIPT_NAME}"`",[Name of the sysinit script])
+AC_MSG_RESULT([Using sysinit script name: (${SYSINIT_SCRIPT_NAME})])
+
+dnl Command for not starting the server at boot.
+default_sysinit_stop_cmd="none"
+test "x$SYSINIT_STOP_CMD" = x && SYSINIT_STOP_CMD=$default_sysinit_stop_cmd
+AC_DEFINE_UNQUOTED(SYSINIT_STOP_CMD,"`eval echo "$SYSINIT_STOP_CMD"`",[Command for not starting the server at boot])
+AC_MSG_RESULT([Using sysinit stop cmd: (${SYSINIT_STOP_CMD})])
+
+
+dnl Hardcoded paths
+PASSWD_FILE="/etc/passwd"
+AC_DEFINE_UNQUOTED(PASSWD_FILE,"`eval echo "${PASSWD_FILE}"`",[Path to passwd])
+AC_MSG_RESULT([Using password file: (${PASSWD_FILE})])
+
+SHADOW_FILE="/etc/shadow"
+AC_DEFINE_UNQUOTED(SHADOW_FILE,"`eval echo "${SHADOW_FILE}"`",[Path to shadow])
+AC_MSG_RESULT([Using shadow file: (${SHADOW_FILE})])
+
+GROUP_FILE="/etc/group"
+AC_DEFINE_UNQUOTED(GROUP_FILE,"`eval echo "${GROUP_FILE}"`",[Path to group])
+AC_MSG_RESULT([Using group file: (${GROUP_FILE})])
+
+GSHADOW_FILE="/etc/gshadow"
+AC_DEFINE_UNQUOTED(GSHADOW_FILE,"`eval echo "${GSHADOW_FILE}"`",[Path to gshadow])
+AC_MSG_RESULT([Using gshadow file: (${GSHADOW_FILE})])
+
+
+AC_OUTPUT([
+Makefile
+src/Makefile
+po/Makefile.in
+])
