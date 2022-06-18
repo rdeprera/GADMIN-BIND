@@ -111,6 +111,12 @@ test "x$RNDC_CONF" = x && RNDC_CONF=$default_rndc_conf
 AC_DEFINE_UNQUOTED(RNDC_CONF,"`eval echo "$RNDC_CONF"`",[Path to rndc.conf])
 AC_MSG_RESULT([Using rndc.conf: (${RNDC_CONF})])
 
+dnl Path to bind configuration file
+default_bind_conf=`eval echo $sysconfdir`"/bind/named.conf"
+test "x$BIND_CONF" = x && BIND_CONF=$default_bind_conf
+AC_DEFINE_UNQUOTED(BIND_CONF,"`eval echo "$BIND_CONF"`",[Path to bind configuration file])
+AC_MSG_RESULT([Using named.conf: (${BIND_CONF})])
+
 dnl Path to resolv.conf
 default_resolv_conf=`eval echo $sysconfdir`"/resolv.conf"
 test "x$RESOLV_PATH" = x && RESOLV_PATH=$default_resolv_conf

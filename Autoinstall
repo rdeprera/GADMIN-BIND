@@ -1,37 +1,42 @@
 
 ### Default paths and other configure options ###
 # SETTINGS_DIR="/etc/gadmin-bind"
-# CHROOT_PATH="/var/named"
-# SYSINIT_SCRIPTS_DIR="/etc/init.d"
-# SYSINIT_SCRIPT_NAME="gadmin-bind"
-# RNDC_CONF="/etc/rndc.conf"
-# RESOLV_PATH="/etc/resolv.conf"
-# SYSLOG_PATH="/var/log/messages"
-# NAMED_BINARY="named"
-# SED_BINARY="sed"
-# DIG_BINARY="dig"
-# RNDC_BINARY="rndc"
-# RNDC_CONFGEN_BINARY="rndc-confgen"
-# CMD_SLEEP_LOG_SECS="3"
-# USERADD_BINARY="useradd"
-# GROUPADD_BINARY="groupadd"
-# NAMED_USER="nobody"
+#CHROOT_PATH=""
+SYSINIT_SCRIPTS_DIR="/etc/init.d"
+SYSINIT_SCRIPT_NAME="gadmin-bind"
+RNDC_CONF="/etc/bind/rndc.conf"
+RESOLV_PATH="/etc/resolv.conf"
+SYSLOG_PATH="/var/log/messages"
+NAMED_BINARY="named"
+SED_BINARY="sed"
+DIG_BINARY="dig"
+RNDC_BINARY="rndc"
+RNDC_CONFGEN_BINARY="rndc-confgen"
+CMD_SLEEP_LOG_SECS="3"
+USERADD_BINARY="useradd"
+GROUPADD_BINARY="groupadd"
+NAMED_USER="bind"
+BIND_CONF="/etc/bind/named.conf"
 
 ### "gadmin-bind" in the SYSINIT_START and STOP commands below   ###
 ### should be changed to whatever SYSINIT_SCRIPT_NAME is set to. ###
 
 ### Redhat/Fedora ###
-./configure --prefix=/usr --sysconfdir=/etc \
---localstatedir=/var --sbindir=/usr/sbin \
-SYSINIT_START_CMD="chkconfig gadmin-bind on" \
-SYSINIT_STOP_CMD="chkconfig gadmin-bind off" &&
-make &&
-make install
-
-### Debian/Ubuntu ###
 #./configure --prefix=/usr --sysconfdir=/etc \
 #--localstatedir=/var --sbindir=/usr/sbin \
-#SYSINIT_START_CMD="update-rc.d -f gadmin-bind defaults" \
-#SYSINIT_STOP_CMD="update-rc.d -f gadmin-bind remove" &&
+#SYSINIT_START_CMD="chkconfig gadmin-bind on" \
+#SYSINIT_STOP_CMD="chkconfig gadmin-bind off" &&
 #make &&
 #make install
+
+### Debian/Ubuntu ###
+./configure --prefix=/usr --sysconfdir=/etc \
+--localstatedir=/var --sbindir=/usr/sbin \
+SYSINIT_START_CMD="update-rc.d -f gadmin-bind defaults" \
+SYSINIT_STOP_CMD="update-rc.d -f gadmin-bind remove" \
+BIND_CONF="/etc/bind/named.conf" \
+RNDC_CONF="/etc/bind/rndc.conf" \
+NAMED_USER="bind" \
+CHROOT_PATH="" &&
+make &&
+make install

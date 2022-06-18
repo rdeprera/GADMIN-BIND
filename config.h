@@ -74,7 +74,7 @@
 #define NAMED_BINARY "named"
 
 /* The user which named runs as */
-#define NAMED_USER "nobody"
+#define NAMED_USER "bind"
 
 /* Name of package */
 #define PACKAGE "gadmin-bind"
@@ -101,13 +101,16 @@
 #define PROC_PATH "/proc"
 
 /* Path to resolv.conf */
-#define RESOLV_PATH "/etc/bind/resolv.conf"
+#define RESOLV_PATH "/etc/resolv.conf"
 
 /* Path to the rndc binary */
 #define RNDC_BINARY "rndc"
 
 /* Path to rndc.conf */
 #define RNDC_CONF "/etc/bind/rndc.conf"
+
+/* Configuration file for bind */
+#define BIND_CONF "/etc/bind/named.conf"
 
 /* Path to the rndc-confgen binary */
 #define RNDC_CONFGEN_BINARY "rndc-confgen"
@@ -116,7 +119,7 @@
 #define SED_BINARY "sed"
 
 /* Path to settings directory etc/gadmin-bind */
-#define SETTINGS_DIR "/etc/bind/gadmin-bind"
+#define SETTINGS_DIR "/etc/gadmin-bind"
 
 /* Path to shadow */
 #define SHADOW_FILE "/etc/shadow"
@@ -125,7 +128,7 @@
 #define STDC_HEADERS 1
 
 /* sysconfdir */
-#define SYSCONFDIR "/etc/bind"
+#define SYSCONFDIR "/etc"
 
 /* Path to the sysinit scripts directory */
 #define SYSINIT_SCRIPTS_DIR "/etc/init.d"

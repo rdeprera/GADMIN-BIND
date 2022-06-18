@@ -52,7 +52,11 @@ void populate_zones(struct w *widgets)
     char *line, *domain_name, *fwd_addr = NULL;
     char *rev_addr, *rev_file, *type, *mask, *tmp, *tmp_addr;
 
-    named_conf = g_strdup_printf("%s/etc/named.conf", CHROOT_PATH_BUF);
+    if(strlen(CHROOT_PATH_BUF) > 0){
+        named_conf = g_strdup_printf("%s%s", CHROOT_PATH_BUF, BIND_CONF);
+    }else{
+        named_conf = g_strdup_printf("%s", BIND_CONF);
+    }
     if((fp=fopen(named_conf, "r"))==NULL)
     {
         printf("Couldnt find: %s\n", named_conf);
@@ -222,7 +226,7 @@ char * get_reverse_ip_for_zone(char *domain_name, char addr_type[128])
     gchar *cmd;
 
 
-    named_conf = g_strdup_printf("%s/etc/named.conf", CHROOT_PATH_BUF);
+    named_conf = g_strdup_printf("%s%s", CHROOT_PATH_BUF, BIND_CONF);
     if((fp=fopen(named_conf, "r"))==NULL)
     {
         printf("Couldnt find: %s\n", named_conf);

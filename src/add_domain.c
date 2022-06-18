@@ -51,7 +51,11 @@ int zone_exists(gchar *zone)
     gchar *match_zone = g_strdup_printf("\"%s\"", zone);
 
     /* Open named.conf in this chroot and check if the domain exists */
-    named_conf = g_strdup_printf("%s/etc/named.conf", CHROOT_PATH_BUF);
+    if(strlen(CHROOT_PATH_BUF) > 0){
+        named_conf = g_strdup_printf("%s%s", CHROOT_PATH_BUF, BIND_CONF);
+    }else{
+        named_conf = g_strdup_printf("%s", BIND_CONF);
+    }
     if((fp=fopen(named_conf, "r"))==NULL)
     {
         info = g_strdup_printf(_("Domain not added. Could not find named.conf here:\n%s\n"), named_conf);
@@ -181,7 +185,7 @@ void add_domain(struct w *widgets)
     
 
     /* Write the forward and reverse zones to named.conf */
-    named_conf = g_strdup_printf("%s/etc/named.conf", CHROOT_PATH_BUF);
+    named_conf = g_strdup_printf("%s%s", CHROOT_PATH_BUF, BIND_CONF);
     if((fp=fopen(named_conf, "a"))==NULL)
     {
         info = g_strdup_printf(_("Domain not added. Could not find named.conf here:\n%s\n"), named_conf);

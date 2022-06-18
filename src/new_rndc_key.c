@@ -104,7 +104,11 @@ void new_rndc_key(struct w *widgets)
     }
 
     /* Insert the new key into named.conf */
-    named_conf = g_strdup_printf("%s/etc/named.conf", CHROOT_PATH_BUF);
+    if(strlen(CHROOT_PATH_BUF) > 0){
+        named_conf = g_strdup_printf("%s%s", CHROOT_PATH_BUF, BIND_CONF);
+    }else{
+        named_conf = g_strdup_printf("%s", BIND_CONF);
+    }
     if((fp=fopen(named_conf, "r"))==NULL)
     {
         info = g_strdup_printf(_("Error: cannot open file:\n%s\n"), named_conf);

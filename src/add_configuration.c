@@ -97,7 +97,7 @@ void add_configuration(struct w *widgets)
 
 
     /* Add /var/named/etc/named.conf if it doesnt exist */
-    file = g_strdup_printf("%s/etc/named.conf", CHROOT_PATH_BUF);
+    file = g_strdup_printf("%s%s", CHROOT_PATH_BUF,BIND_CONF);
     if( ! file_exists(file) )
     {
 	if((fp=fopen(file, "w+"))==NULL)

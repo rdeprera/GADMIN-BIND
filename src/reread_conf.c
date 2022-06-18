@@ -55,12 +55,16 @@ void reread_conf(struct w *widgets)
 
     clear_log_tab(widgets);
 
-
-    command = g_strdup_printf("%s -u %s -t %s -c /etc/named.conf", NAMED_BINARY, NAMED_USER, CHROOT_PATH_BUF);
+    if (strlen(CHROOT_PATH_BUF) > 0){
+      command = g_strdup_printf("%s -u %s -t %s -c %s", NAMED_BINARY, NAMED_USER, CHROOT_PATH_BUF, BIND_CONF);
+    }else{
+      command = g_strdup_printf("%s -u %s -c %s", NAMED_BINARY, NAMED_USER, BIND_CONF);
+    }
+    
     if( ! run_command(command) )
     {
         printf("Restarting named failed.\n");
-        test = g_strdup_printf("%s -fg -u %s -t %s -c /etc/named.conf 2>&1", NAMED_BINARY, NAMED_USER, CHROOT_PATH_BUF);
+        test = g_strdup_printf("%s -fg -u %s -t %s -c %s 2>&1", NAMED_BINARY, NAMED_USER, CHROOT_PATH_BUF, BIND_CONF);
 	run_command_show_err(test);
 	g_free(test);
     }

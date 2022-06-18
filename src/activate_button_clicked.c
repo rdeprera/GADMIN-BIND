@@ -74,7 +74,7 @@ void write_sysinit_script()
     "case \"$1\" in\n",
     "		start)\n",
     "\n",
-    NAMED_BINARY, " -u ", NAMED_USER, " -t ", CHROOT_PATH_BUF, " -c /etc/named.conf\n",
+    NAMED_BINARY, " -u ", NAMED_USER, " -t ", CHROOT_PATH_BUF, " -c ", BIND_CONF, "\n",
     "\n",
     ";;\n",
     "\n",
@@ -118,11 +118,11 @@ void activate_button_clicked(struct w *widgets)
 
     clear_log_tab(widgets);
 
-    start = g_strdup_printf("%s -u %s -t %s -c /etc/named.conf", NAMED_BINARY, NAMED_USER, CHROOT_PATH_BUF);
+    start = g_strdup_printf("%s -u %s -t %s -c %s", NAMED_BINARY, NAMED_USER, CHROOT_PATH_BUF, BIND_CONF);
     if( ! run_command(start) )
     {
 	/* Shows any errors QA:d */
-        test = g_strdup_printf("%s -fg -u %s -t %s -c /etc/named.conf 2>&1", NAMED_BINARY, NAMED_USER, CHROOT_PATH_BUF);
+        test = g_strdup_printf("%s -fg -u %s -t %s -c %s 2>&1", NAMED_BINARY, NAMED_USER, CHROOT_PATH_BUF, BIND_CONF);
 	run_command_show_err(test);
 	g_free(test);
 	activated = 0;

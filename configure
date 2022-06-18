@@ -7915,6 +7915,17 @@ _ACEOF
 { $as_echo "$as_me:$LINENO: result: Using rndc.conf: (${RNDC_CONF})" >&5
 $as_echo "Using rndc.conf: (${RNDC_CONF})" >&6; }
 
+default_bind_conf=`eval echo $sysconfdir`"/bind/named.conf"
+test "x$BIND_CONF" = x && BIND_CONF=$default_bind_conf
+
+cat >>confdefs.h <<_ACEOF
+#define BIND_CONF "`eval echo "$BIND_CONF"`"
+_ACEOF
+
+{ $as_echo "$as_me:$LINENO: result: Using named.conf: (${BIND_CONF})" >&5
+$as_echo "Using named.conf: (${BIND_CONF})" >&6; }
+
+
 default_resolv_conf=`eval echo $sysconfdir`"/resolv.conf"
 test "x$RESOLV_PATH" = x && RESOLV_PATH=$default_resolv_conf
 
@@ -8833,7 +8844,8 @@ $debug ||
 if test -n "$CONFIG_FILES"; then
 
 
-ac_cr=''
+ac_cr='
+'
 ac_cs_awk_cr=`$AWK 'BEGIN { print "a\rb" }' </dev/null 2>/dev/null`
 if test "$ac_cs_awk_cr" = "a${ac_cr}b"; then
   ac_cs_awk_cr='\\r'

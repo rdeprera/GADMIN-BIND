@@ -84,7 +84,7 @@ void delete_domain(struct w *widgets)
 
     /* Collect everything in named.conf but this sites 
      * forward and reverse zones */
-    path = g_strdup_printf("%s/etc/named.conf", CHROOT_PATH_BUF);
+    path = g_strdup_printf("%s%s", CHROOT_PATH_BUF, BIND_CONF);
 
     if((fp=fopen(path, "r"))==NULL)
     {

@@ -108,6 +108,9 @@
 /* Path to rndc.conf */
 #undef RNDC_CONF
 
+/* Configuration file for bind */
+#undef BIND_CONF
+
 /* Path to the rndc-confgen binary */
 #undef RNDC_CONFGEN_BINARY
 
